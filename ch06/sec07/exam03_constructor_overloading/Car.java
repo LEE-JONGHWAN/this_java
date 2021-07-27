@@ -19,7 +19,7 @@ public class Car {
 		this.model = model;
 //		this.color = color;
 	}
-	Car(Double color, String model) {
+	Car(String color, String model) {
 		this.model = model;
 //		this.color = color;
 	}
