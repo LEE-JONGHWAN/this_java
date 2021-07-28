@@ -7,16 +7,19 @@ import java.util.function.ObjIntConsumer;
 
 public class ConsumerExample {
 	public static void main(String[] args) {
-		Consumer<String> consumer = t -> System.out.println(t + "8");
+		Consumer<String> consumer = t -> System.out.println(t + "11");
 		consumer.accept("java");
 		
 		BiConsumer<String, String> bigConsumer = (t, u) -> System.out.println(t + u);
 		bigConsumer.accept("Java", "8");
 		
 		DoubleConsumer doubleConsumer = d -> System.out.println("Java" + d);
-		doubleConsumer.accept(8.0);
+		doubleConsumer.accept(1.0);
 		
-		ObjIntConsumer<String> objIntConsumer = (t, i) -> System.out.println(t + i);
-		objIntConsumer.accept("Java", 8);
+		ObjIntConsumer<String> objIntConsumer = (t, limit) -> { 
+		for(int i = 1; i <= limit; i++)
+				System.out.println(t + i);
+		};
+		objIntConsumer.accept("자바", 11);
 	}
 }

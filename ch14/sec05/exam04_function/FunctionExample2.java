@@ -2,20 +2,23 @@
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.ToDoubleBiFunction;
+import java.util.function.ToDoubleFunction;
 import java.util.function.ToIntFunction;
 
 public class FunctionExample2 {
 	private static List<Student> list = Arrays.asList(
-		new Student("홍길동", 90, 96),
-		new Student("신용권", 95, 93)
+		new Student("홍길동", 92, 96),
+		new Student("신용권", 95, 93),
+		new Student("신용권", 94, 93)
 	);
 	
-	public static double avg(ToIntFunction<Student> function) {
-		int sum = 0;
+	public static double avg(ToDoubleFunction<Student> function) {
+		double sum = 0;
 		for(Student student : list) {
-			sum += function.applyAsInt(student);
+			sum += function.applyAsDouble(student);
 		}
-		double avg = (double) sum / list.size();
+		double avg = sum / list.size();
 		return avg;
 	}
 	

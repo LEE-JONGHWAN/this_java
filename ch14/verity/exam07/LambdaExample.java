@@ -8,10 +8,10 @@ public class LambdaExample {
 		new Student("신용권", 95, 93)
 	};
 	
-	public static double avg(ToIntFunction<Student> function) {
+	public static double avg(ToIntFunction<Student> getStudentScore) {
 		int sum = 0;
 		for(Student student : students) {
-			sum += function.applyAsInt(student);
+			sum += getStudentScore.applyAsInt(student);
 		}
 		double avg = (double) sum / students.length;
 		return avg;

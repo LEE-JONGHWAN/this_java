@@ -6,7 +6,7 @@ public class OperatorExample {
 	private static int[] scores = { 92, 95, 87 };
 	
 	public static int maxOrMin(IntBinaryOperator operator) {
-		int result = scores[0];
+		int result = 0;
 		for(int score : scores) {
 			result = operator.applyAsInt(result, score);
 		}
@@ -31,5 +31,9 @@ public class OperatorExample {
 			}
 		);
 		System.out.println("최소값: " + min);
+		
+		//합계 얻기
+		int sum = maxOrMin((a, b) -> a + b);
+		System.out.println("sum값: " + sum);
 	}
 }
