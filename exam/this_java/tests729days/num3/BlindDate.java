@@ -50,6 +50,7 @@ public class BlindDate extends Meeting{
 		// (전화번호 ‘010’ 3개 및 ‘011’ 1개 추가를 시도함)
 			for(int i = 0; i < 3;i++) {
 				phonestring.add("010");
+				phonestring.add("011");
 			}
 				System.out.println(blid);
 		
