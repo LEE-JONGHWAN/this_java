@@ -4,7 +4,7 @@ package sec09.exam01_instance_member;
 public class HanoiTower {
 	static long moveCount = 0;
 	public static void main(String[] args) {
-		printHanoi(1, 2, 3, 64);
+		printHanoi(1, 2, 3, 6);
 		System.out.println("이동횟수: " + moveCount);
 	}
 
