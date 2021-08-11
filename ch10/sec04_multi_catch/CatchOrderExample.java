@@ -5,8 +5,10 @@ public class CatchOrderExample {
 		try {
 			String data1 = args[0];
 			String data2 = args[1];
+			String data3 = null;
 			int value1 = Integer.parseInt(data1);
 			int value2 = Integer.parseInt(data2);
+			int len = data3.length();
 			int result = value1 + value2;
 			System.out.println(data1 + "+" + data2 + "=" + result);
 		} catch(ArrayIndexOutOfBoundsException e) {
