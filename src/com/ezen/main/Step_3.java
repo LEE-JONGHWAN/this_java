@@ -1,17 +1,10 @@
-package com.ezen.nu6level;
+package com.ezen.main;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
 import com.jbpark.dabang.module.Utility;
 
-class UserInfoException extends Exception {
-	private static final long serialVersionUID = 1L;
-
-	UserInfoException(String msg) {
-		super(msg);
-	}
-}
 
 public class Step_3 {
 

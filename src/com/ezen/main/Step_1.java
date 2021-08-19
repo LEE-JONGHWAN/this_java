@@ -1,4 +1,4 @@
-package com.ezen.nu6level;
+package com.ezen.main;
 
 import java.util.Scanner;
 

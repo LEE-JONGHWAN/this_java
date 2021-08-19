@@ -11,14 +11,15 @@ public class TreeSetExample3 {
 		treeSet.add("description");
 		treeSet.add("ever");
 		treeSet.add("zoo");
-		boolean result = treeSet.add("base");
-		boolean result2 = treeSet.add("base");
+		treeSet.add("f");
+		treeSet.add("base");
+		treeSet.add("base");
 		treeSet.add("guess");
 		treeSet.add("cherry");
 		
 		System.out.println("[c~f 사이의 단어 검색]");
 		NavigableSet<String> rangeSet = treeSet.subSet(
-				"c", true, "f", true);
+				"c", true, "f", false);
 		for(String word : rangeSet) {
 			System.out.println(word);
 		}

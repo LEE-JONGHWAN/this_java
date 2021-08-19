@@ -9,17 +9,18 @@ public class StackExample {
 		
 		Deque<Coin> coinBox = new ArrayDeque<Coin>();
 		
-		coinBox.push(new Coin(10));
+		coinBox.push(new Coin(100));
 		coinBox.push(new Coin(50));
 		coinBox.push(new Coin(500));
-		coinBox.push(new Coin(1000));
+		coinBox.push(new Coin(10));
 		
-		coinBox.stream().map(coin -> "꺼내온 동전 : " + coin.getValue() + "원")
-			.forEach(System.out::println);
+//		coinBox.stream().map(coin -> "꺼내온 동전 : " + coin.getValue() + "원")
+//			.forEach(System.out::println);
 
 		while(!coinBox.isEmpty()) {
 			Coin coin = coinBox.pop();
 			System.out.println("꺼내온 동전 : " + coin.getValue() + "원");
+			coinBox.clear();
 		}
 
 	}

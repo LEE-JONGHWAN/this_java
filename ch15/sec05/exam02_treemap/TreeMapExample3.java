@@ -7,6 +7,10 @@ import java.util.TreeMap;
 public class TreeMapExample3 {
 	public static void main(String[] args) {
 		TreeMap<String, Integer> treeMap = new TreeMap<String, Integer>();
+		TreeMap<Employee, Integer> treeMap2 = new TreeMap<>();
+		
+		treeMap2.put(new Employee(), 100);
+		
 		treeMap.put("apple", new Integer(10));
 		treeMap.put("f", new Integer(60));
 		treeMap.put("forever", new Integer(60));
@@ -20,7 +24,7 @@ public class TreeMapExample3 {
 		System.out.println("[c~f 사이의 단어 검색]");
 
 		//@formatter:off
-		NavigableMap<String,Integer> rangeMap = treeMap.subMap("c", true, "f", false);
+		NavigableMap<String,Integer> rangeMap = treeMap.subMap("c", true, "g", false);
 		rangeMap.entrySet().stream()
 			.map(entry->
 			entry.getKey() + "-" + entry.getValue() + "페이지")

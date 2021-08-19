@@ -12,6 +12,14 @@ public class LinkedListExample {
 		long startTime;
 		long endTime;
 		
+		list2.add("ab2");
+		list2.add("ab1");
+		list2.add("ab4");
+		list2.add("ab3");
+		list2.forEach(System.out::println);
+		if(list2.size() == 4)
+			return;
+		
 		startTime = System.nanoTime();
 		for(int i=0; i<10000; i++) {
 			list1.add(0, String.valueOf(i));

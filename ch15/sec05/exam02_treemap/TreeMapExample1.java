@@ -33,8 +33,15 @@ public class TreeMapExample1 {
 		System.out.println("85점 이거나 바로 위의 점수: " + entry.getKey() + "-" + entry.getValue() + "\n");
 		
 		while(!scores.isEmpty()) {
-			entry = scores.pollFirstEntry();
+			entry = scores.pollLastEntry();
 			System.out.println(entry.getKey() + "-" + entry.getValue() + "(남은 객체 수: " + scores.size() + ")");
 		}
+		var x = scores.entrySet().iterator();
+		while(x.hasNext()) {
+			var e = x.next();
+			System.out.println(e.getKey() + "," + e.getValue());
+			
+		}
+		
 	}
 }

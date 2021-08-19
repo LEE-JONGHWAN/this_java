@@ -15,19 +15,38 @@ public class TreeMapExample2 {
 		scores.put(new Integer(80), "김자바");
 		
 		
-		scores
-			.descendingMap().entrySet().stream()
-			.map(e -> e.getKey() + "-" + e.getValue() + " ")
-			.forEach(System.out::print);
+		NavigableMap<Integer,String> descendingMap = scores.descendingMap();
+		Set<Map.Entry<Integer,String>> descendingEntrySet = descendingMap.entrySet();
+		
+		descendingEntrySet.forEach(e
+				-> System.out.println(e.getKey() + "-" + e.getValue() + " "));
+		for(var key : descendingMap.keySet()) {
+			if(key >= 90) {
+				System.out.println(key + ", " + descendingMap.get(key));
+			}
+		}
+		
+		
+		
 		System.out.println();
 		
-		var ascendingMap = scores;    // descendingMap.descendingMap();
-		var ascendingEntrySet = ascendingMap.entrySet();
-		
-		
-			
-		for(var entry : ascendingEntrySet) {
+		NavigableMap<Integer,String> ascendingMap = descendingMap.descendingMap();
+		Set<Map.Entry<Integer,String>> ascendingEntrySet = ascendingMap.entrySet();
+		for(Map.Entry<Integer,String> entry : ascendingEntrySet) {
 			System.out.print(entry.getKey() + "-" + entry.getValue() + " ");
 		}
+		
+		
+//		scores
+//			.descendingMap().entrySet().stream()
+//			.map(e -> e.getKey() + "-" + e.getValue() + " ")
+//			.forEach(System.out::print);
+//		System.out.println();
+//		
+//		var ascendingMap = scores;    // descendingMap.descendingMap();
+//		var ascendingEntrySet = ascendingMap.entrySet();
+//		for(var entry : ascendingEntrySet) {
+//			System.out.print(entry.getKey() + "-" + entry.getValue() + " ");
+//		}
 	}
 }

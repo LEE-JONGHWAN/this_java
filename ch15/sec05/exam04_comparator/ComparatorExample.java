@@ -13,16 +13,16 @@ public class ComparatorExample {
 //		treeSet.add(new Fruit("딸기", 6000));
 		
 		
-		TreeSet<Fruit> treeSet = new TreeSet<Fruit>(
+		TreeSet<Fruit> fruitBasKet = new TreeSet<Fruit>(
 				new DescendingComparator());
-		treeSet = new TreeSet<Fruit>(
+		fruitBasKet = new TreeSet<Fruit>(
 				(f1, f2) ->(f2.price - f1.price));
 		
-		treeSet.add(new Fruit("포도", 3000));
-		treeSet.add(new Fruit("수박", 10000));		
-		treeSet.add(new Fruit("딸기", 6000));
+		fruitBasKet.add(new Fruit("포도", 3000));
+		fruitBasKet.add(new Fruit("수박", 10000));		
+		fruitBasKet.add(new Fruit("딸기", 6000));
 		
-		treeSet.stream()
+		fruitBasKet.stream()
 			.map(fruit -> fruit.name + ":" + fruit.price)
 			.forEach(System.out::println);
 		
