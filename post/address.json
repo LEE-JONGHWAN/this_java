@@ -1,0 +1,21 @@
+{
+	"resultStatus": "SUCCESS",
+	"addressList": [
+		{
+			"addressLine1": "1 MARKET ST",
+			"city": "SAN FRANCISCO",
+			"state": "CA",
+			"zip5": "94105",
+			"zip4": "1420",
+			"carrierRoute": "C011",
+			"countyName": "SAN FRANCISCO",
+			"deliveryPoint": "99",
+			"checkDigit": "6",
+			"cmar": "N",
+			"elot": "0046",
+			"elotIndicator": "A",
+			"recordType": "H",
+			"dpvConfirmation": "D",
+			"defaultFlag": "Y"
+		},
+
